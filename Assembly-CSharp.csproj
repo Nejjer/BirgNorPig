@@ -53,11 +53,12 @@
     <UnityVersion>2020.3.13f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Constrains.cs" />
+    <Compile Include="Assets\Scripts\Background.cs" />
     <Compile Include="Assets\Scripts\SpawnObstacles.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\Background.cs" />
-    <Compile Include="Assets\Scripts\Constrains.cs" />
+    <Compile Include="Assets\Scripts\ButtonRestart.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

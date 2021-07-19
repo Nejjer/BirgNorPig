@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject _textScore;
     [SerializeField] GameObject _textGameOver;
     [SerializeField] GameObject _SpawnerObstacle;
+    [SerializeField] GameObject _buttonRestart;
     private int _score = 0;
     private bool _isAlive = true;
     private Rigidbody2D _rb;
@@ -50,5 +51,6 @@ public class Player : MonoBehaviour
     {
         _isAlive = false;
         _textGameOver.SetActive(true);
+        _buttonRestart.SetActive(true);
     }
 }
