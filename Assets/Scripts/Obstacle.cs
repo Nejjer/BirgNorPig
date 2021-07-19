@@ -5,6 +5,8 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     [SerializeField] float _speed = 0.05f;
+    
+
     void Start()
     {
     }
@@ -28,11 +30,14 @@ public class Obstacle : MonoBehaviour
     //Двигаем
     void FixedUpdate()
     {
+        //Если игра начата
+        
         transform.Translate(Vector3.left * _speed);
         // уничтожаем объект
         if (transform.position.x < -5f)
-        {
-            Destroy(gameObject);
-        }
+            {
+                Destroy(gameObject);
+            }        
+        
     }
 }

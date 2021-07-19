@@ -7,9 +7,16 @@ public class SpawnObstacles : MonoBehaviour
 
     [SerializeField] GameObject _obstacle;
 
-    void Start()
+    public void StartGame()
     {
         StartCoroutine("Spawn");
+        Instantiate(_obstacle, new Vector2(transform.position.x, Random.Range(-1f, 2.4f)), Quaternion.identity);
+
+    }
+
+
+    void Start()
+    {
     }
 
     // Update is called once per frame
