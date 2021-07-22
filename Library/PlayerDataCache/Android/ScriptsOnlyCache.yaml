@@ -666,4 +666,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Program1/Unity/Projects/BirdNotPig/Builds/BirdNotPigV0.0.2.apk
+  playerPath: C:/Program1/Unity/Projects/BirdNotPig/Builds/BirdNotPigV0.0.3.apk

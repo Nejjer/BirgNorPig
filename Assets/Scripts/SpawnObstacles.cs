@@ -4,37 +4,26 @@ using UnityEngine;
 
 public class SpawnObstacles : MonoBehaviour
 {
-
     [SerializeField] GameObject _obstacle;
-
-    public void StartGame()
+    [SerializeField] float _timeBetweenSpawn = 2f;
+    public void StartSpawn()
     {
-        StartCoroutine("Spawn");
-        Instantiate(_obstacle, new Vector2(transform.position.x, Random.Range(-1f, 2.4f)), Quaternion.identity);
+        Instantiate(_obstacle, new Vector2(transform.position.x, Random.Range(-3.7f,3.7f)), Quaternion.identity);
+        StartCoroutine("SpawnObstacle");
 
     }
 
 
-    void Start()
+
+    private void RestartCouritine()
     {
+        StartCoroutine("SpawnObstacle");
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SpawnObstacle()
     {
-        
-    }
-
-    private void RestartSpawn()
-    {
-        StartCoroutine("Spawn");
-
-    }
-
-    IEnumerator Spawn()
-    {
-        yield return new WaitForSeconds(2f);
-        Instantiate(_obstacle, new Vector2(transform.position.x, Random.Range(-1f,2.4f)), Quaternion.identity);
-        RestartSpawn();
+        yield return new WaitForSeconds(_timeBetweenSpawn);
+        Instantiate(_obstacle, new Vector2(transform.position.x, Random.Range(-3.7f, 3.7f)), Quaternion.identity);
+        RestartCouritine();
     }
 }
